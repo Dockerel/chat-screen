@@ -1,0 +1,72 @@
+.chat-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+.chat-topbar__column > span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 23px;
+}
+
+.chat-topbar__column:last-child i:nth-child(2) {
+  margin: 0 20px;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat__opponent {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.chat__opponent:first-child,
+.chat__myside:first-child {
+  margin-top: 30px;
+}
+
+.chat__opponent img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.chat__opponent span {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  font-size: 15px;
+  font-weight: 350;
+}
+
+.chat__myside span {
+  display: inline-block;
+  background-color: var(--green);
+}
+
+.chat__myside {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.chat__myside span {
+  display: inline-block;
+  background-color: var(--green);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  font-size: 15px;
+  font-weight: 350;
+}

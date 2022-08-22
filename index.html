@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/143eafbf8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Chat</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column clock">00:00</div>
+      <div class="status-bar__column">
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+    <div class="chat-topbar">
+      <div class="chat-topbar__column">
+        <i class="fa-solid fa-chevron-left"></i>
+        <span>Zordy</span>
+      </div>
+      <div class="chat-topbar__column">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="chats"></div>
+    <div class="chat-input">
+      <select id="option-select">
+        <option value="myside">My side</option>
+        <option value="opponent">Opponent</option>
+      </select>
+      <input id="chatInput" type="text" required />
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/clock.js"></script>
+  </body>
+</html>

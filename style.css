@@ -1,0 +1,8 @@
+@import "reset.css";
+@import "variable.css";
+@import "screen.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+/* components */
+@import "components/status-bar.css";
+@import "components/chat-input.css";

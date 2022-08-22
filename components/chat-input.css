@@ -1,0 +1,33 @@
+.chat-input {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 77px;
+  margin-bottom: 15px;
+}
+
+.chat-input input:focus-within {
+  outline: 3px solid var(--green);
+}
+
+.chat-input input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: outline 0.3s ease-in-out;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+#option-select {
+  border: none;
+  outline-color: var(--green);
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 10px;
+}
