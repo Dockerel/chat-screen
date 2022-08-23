@@ -19,8 +19,6 @@ function handleInput() {
   chatInput.value = "";
   const chatCdnClass = `chat__${chatClass}`;
   const infoChat = { text: chatContent, class: chatCdnClass, id: Date.now() };
-
-  //문제의 push() vvvvvvvv
   chatList.push(infoChat);
   paintChats(infoChat);
   saveToDB();
@@ -35,7 +33,7 @@ function paintChats(newChats) {
   div.id = newChats.id;
   const span = document.createElement("span");
   span.innerText = newChats.text;
-  if (chatClass === "opponent") {
+  if (newChats.class === "chat__opponent") {
     div.appendChild(img);
   }
   div.appendChild(span);
@@ -49,7 +47,8 @@ function saveToDB() {
 
 function handleDeleteChat(event) {
   const rmv = event.target.parentElement;
-  rmv.remove();
+  chatList = chatList.filter((chat) => chat.id !== parseInt(rmv.id)); // localStorage의 item 지우는 부분. chat.id !== parseInt(rmv.id) 가 참인 경우 제외하고 filter 시킴.
+  rmv.remove(); //실제 element 지우는 부분
   saveToDB();
 }
 
@@ -58,8 +57,8 @@ option.addEventListener("change", handleOption);
 
 const savedChats = localStorage.getItem(CHAT_KEY);
 
-if (saveToDB != null) {
+if (savedChats !== null) {
   const parsedChats = JSON.parse(savedChats);
   chatList = parsedChats;
-  //parsedChats.forEach(paintChats);
+  parsedChats.forEach(paintChats);
 }
